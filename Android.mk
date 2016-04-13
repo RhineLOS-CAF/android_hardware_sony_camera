@@ -1,3 +1,4 @@
+ifeq ($(call my-dir),$(call project-path-for,qcom-camera))
 ifneq ($(filter yukon rhine shinano kanuti kitakami loire,$(PRODUCT_PLATFORM)),)
 
 MM_V4L2_DRIVER_LIST += msm8960
@@ -23,4 +24,5 @@ ifneq (,$(filter $(MM_V4L2_DRIVER_LIST),$(TARGET_BOARD_PLATFORM)))
   endif
 endif
 
+endif
 endif
