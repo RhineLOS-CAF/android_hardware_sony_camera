@@ -7635,6 +7635,7 @@ int32_t QCamera2HardwareInterface::preparePreview()
         if(!isRdiMode() && recordingHint) {
             //stop face detection,longshot,etc if turned ON in Camera mode
 #ifndef VANILLA_HAL
+            int32_t arg; //dummy arg
             if (isLongshotEnabled()) {
                 sendCommand(CAMERA_CMD_LONGSHOT_OFF, arg, arg);
             }
